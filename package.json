@@ -49,6 +49,7 @@
     "@commitlint/config-conventional": "^12.1.4",
     "@react-native-community/eslint-config": "^3.0.0",
     "@release-it/conventional-changelog": "^3.0.1",
+    "@types/color": "^3.0.2",
     "@types/react": "^16.9.19",
     "@types/react-native": "0.61.10",
     "auto-changelog": "^2.3.0",

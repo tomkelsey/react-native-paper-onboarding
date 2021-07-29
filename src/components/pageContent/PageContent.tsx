@@ -55,7 +55,13 @@ const PageContentComponent = ({
   );
 
   console.log('next: ', next);
-  const nextStyle = useMemo(() => [styles.next, { backgroundColor: Color(backgroundColor).darken(0.2).string() }], [backgroundColor]);
+  const nextStyle = useMemo(
+    () => [
+      styles.next,
+      { backgroundColor: Color(backgroundColor).darken(0.2).string() },
+    ],
+    [backgroundColor]
+  );
 
   //#endregion
   return (
