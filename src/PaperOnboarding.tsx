@@ -244,6 +244,7 @@ const PaperOnboardingComponent = forwardRef<
               key={`page-${index}`}
               index={index}
               item={item}
+              next={handleNavigateToNextPage}
               animatedIndex={animatedIndex}
               indicatorSize={indicatorSize}
               titleStyle={titleStyle}

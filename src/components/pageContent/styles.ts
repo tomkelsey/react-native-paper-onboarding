@@ -32,4 +32,17 @@ export const styles = StyleSheet.create({
   background: {
     ...StyleSheet.absoluteFillObject,
   },
+  next: {
+    marginTop: 16,
+    padding: 12,
+    borderRadius: 8,
+    width: '100%',
+    alignContent: 'center',
+    justifyContent: 'center',
+  },
+  nextText: {
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: '600',
+  },
 });

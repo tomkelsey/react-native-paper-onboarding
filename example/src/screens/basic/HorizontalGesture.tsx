@@ -33,6 +33,8 @@ const data: PaperOnboardingItemType[] = [
     title: 'Stores',
     description: 'All local stores are categorized for your convenience',
     backgroundColor: '#9D8FBF',
+    buttonText: 'Get Started',
+    onButtonPress: () => console.log('PRESSED ME!'),
     image: <StoreSVG />,
     icon: ({ size }) => <ShoppingCartSVG size={size} color="#9D8FBF" />,
   },

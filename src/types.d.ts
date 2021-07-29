@@ -61,6 +61,16 @@ export interface PaperOnboardingItemType {
    * @default false
    */
   showCloseButton?: boolean;
+  /**
+   * Button text.
+   * @type {string}
+   */
+  buttonText?: string;
+  /**
+   * Function called on button press.
+   * @type {function}
+   */
+  onButtonPress?: () => void;
 }
 
 export interface PaperOnboardingScreenDimensions {
@@ -133,15 +143,20 @@ export interface PageProps {
   screenDimensions: PaperOnboardingScreenDimensions;
   safeInsets: Required<Insets>;
   handleRef: (ref: MutableRefObject<Animated.View>, index: number) => void;
+  backgroundColor: string;
+  onButtonPress: () => void;
+  next: () => void;
 }
 
 export interface PageContentProps
   extends Pick<
     PaperOnboardingItemType,
-    'title' | 'titleStyle' | 'description' | 'descriptionStyle' | 'image'
+    'title' | 'titleStyle' | 'description' | 'descriptionStyle' | 'image' | 'buttonText' | 'onButtonPress'
   > {
   index: number;
   animatedFocus: Animated.Node<number>;
+  backgroundColor: string;
+  next: () => void;
 }
 
 export interface IndicatorIconProps {

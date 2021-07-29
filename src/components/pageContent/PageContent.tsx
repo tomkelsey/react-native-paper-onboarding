@@ -1,6 +1,7 @@
 import React, { useMemo, memo } from 'react';
-import { Text, Dimensions } from 'react-native';
+import { Text, Dimensions, TouchableOpacity } from 'react-native';
 import Animated, { Extrapolate } from 'react-native-reanimated';
+import Color from 'color';
 import { styles } from './styles';
 import type { PageContentProps } from '../../types';
 
@@ -16,7 +17,11 @@ const PageContentComponent = ({
   animatedFocus,
   image,
   title,
+  next,
+  buttonText = 'Next',
+  onButtonPress,
   description,
+  backgroundColor,
   titleStyle: titleStyleOverride,
   descriptionStyle: descriptionStyleOverride,
 }: PageContentProps) => {
@@ -48,6 +53,10 @@ const PageContentComponent = ({
     ],
     [animatedImageTopPosition]
   );
+
+  console.log('next: ', next);
+  const nextStyle = useMemo(() => [styles.next, { backgroundColor: Color(backgroundColor).darken(0.2).string() }], [backgroundColor]);
+
   //#endregion
   return (
     <>
@@ -58,6 +67,9 @@ const PageContentComponent = ({
       )}
       <Text style={titleStyle}>{title}</Text>
       <Text style={descriptionStyle}>{description}</Text>
+      <TouchableOpacity onPress={onButtonPress || next} style={nextStyle}>
+        <Text style={styles.nextText}>{buttonText}</Text>
+      </TouchableOpacity>
     </>
   );
 };

@@ -15,6 +15,7 @@ const PageComponent = ({
   item,
   animatedIndex,
   indicatorSize,
+  next,
   titleStyle: titleStyleOverride,
   descriptionStyle: descriptionStyleOverride,
   screenDimensions,
@@ -97,8 +98,12 @@ const PageComponent = ({
       image: item.image,
       title: item.title,
       description: item.description,
+      backgroundColor: item.backgroundColor,
       titleStyle,
       descriptionStyle,
+      buttonText: item.buttonText,
+      onButtonPress: item.onButtonPress,
+      next,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [index, item, titleStyle, descriptionStyle]
