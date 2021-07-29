@@ -102,6 +102,7 @@ const PageComponent = ({
       titleStyle,
       descriptionStyle,
       buttonText: item.buttonText,
+      buttonColor: item.buttonColor,
       onButtonPress: item.onButtonPress,
       next,
     }),

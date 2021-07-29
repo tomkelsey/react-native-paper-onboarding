@@ -39,7 +39,7 @@
     "release": "release-it"
   },
   "dependencies": {
-    "color": "^4.0.0",
+    "@gorhom/paper-onboarding": "tomkelsey/react-native-paper-onboarding#44ef36b11388e8a3357be442db9e99df78f5ce69",
     "lodash.isequal": "^4.5.0",
     "react-native-redash": "^14.2.4",
     "react-native-svg": "^12.1.1"

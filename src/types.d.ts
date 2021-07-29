@@ -67,6 +67,11 @@ export interface PaperOnboardingItemType {
    */
   buttonText?: string;
   /**
+   * Button background color.
+   * @type {function}
+   */
+  buttonColor?: string;
+  /**
    * Function called on button press.
    * @type {function}
    */
@@ -157,6 +162,7 @@ export interface PageContentProps
     | 'descriptionStyle'
     | 'image'
     | 'buttonText'
+    | 'buttonColor'
     | 'onButtonPress'
   > {
   index: number;

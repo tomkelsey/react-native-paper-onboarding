@@ -1,7 +1,6 @@
 import React, { useMemo, memo } from 'react';
 import { Text, Dimensions, TouchableOpacity } from 'react-native';
 import Animated, { Extrapolate } from 'react-native-reanimated';
-import Color from 'color';
 import { styles } from './styles';
 import type { PageContentProps } from '../../types';
 
@@ -19,6 +18,7 @@ const PageContentComponent = ({
   title,
   next,
   buttonText = 'Next',
+  buttonColor,
   onButtonPress,
   description,
   backgroundColor,
@@ -54,13 +54,16 @@ const PageContentComponent = ({
     [animatedImageTopPosition]
   );
 
-  console.log('next: ', next);
   const nextStyle = useMemo(
     () => [
       styles.next,
-      { backgroundColor: Color(backgroundColor).darken(0.2).string() },
+      buttonColor || backgroundColor
+        ? {
+            backgroundColor: buttonColor || backgroundColor,
+          }
+        : {},
     ],
-    [backgroundColor]
+    [buttonColor, backgroundColor]
   );
 
   //#endregion

@@ -19,6 +19,7 @@ const data: PaperOnboardingItemType[] = [
     title: 'Hotels',
     description: 'All hotels and hostels are sorted by hospitality rating',
     backgroundColor: '#698FB8',
+    buttonColor: 'red',
     image: <HotelSVG />,
     icon: ({ size }) => <KeySVG size={size} color="#698FB8" />,
   },
