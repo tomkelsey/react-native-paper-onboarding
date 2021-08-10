@@ -159,6 +159,7 @@ export const useTiming = ({
             ),
             [
               set(animationState.finished, 0),
+              set(isManuallyAnimated, 0),
               set(
                 animationState.position,
                 add(animatedStaticIndex, valueClamp)
